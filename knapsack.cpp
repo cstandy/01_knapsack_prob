@@ -20,9 +20,9 @@ int main() {
 	int item = 3;
 	int weight_bound = 50;
 
-	for (int i = 0; i < item; i++) {
-		cout << "weight: " << weight[i] << ", value: " << value[i] << endl;
-	}
+//	for (int i = 0; i < item; i++) {
+//		cout << "weight: " << weight[i] << ", value: " << value[i] << endl;
+//	}
 
 	// Create the table and initialize
 	vector<vector<int>> knap;
