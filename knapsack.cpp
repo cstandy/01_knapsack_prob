@@ -24,6 +24,7 @@ int main() {
 		cout << "weight: " << weight[i] << ", value: " << value[i] << endl;
 	}
 
+	// Create the table and initialize
 	vector<vector<int>> knap;
 	vector<int> tmp;
 
@@ -37,6 +38,7 @@ int main() {
 		knap[0][w] = 0;
 	}
 
+	// Fill the table
 	for (int i = 0; i <= item; i++) {
 		for (int w = 0; w <= weight_bound; w++) {
 			if (i == 0 || w == 0)
@@ -55,12 +57,13 @@ int main() {
 		
 	}
 
-	for (int w = 0; w < weight_bound + 1; w++) {
-		for (int i = 0; i < item + 1; i++) {
-			cout << "c[" << i << "][" << w << "] = " << knap[i][w] << ", ";
-		}
-		cout << "\n";
-	}
+	// Output the value of tabular method
+// 	for (int w = 0; w < weight_bound + 1; w++) {
+// 		for (int i = 0; i < item + 1; i++) {
+// 			cout << "c[" << i << "][" << w << "] = " << knap[i][w] << ", ";
+// 		}
+// 		cout << "\n";
+// 	}
 
 	cout << "Max value = " << knap[item][weight_bound] << "\n";
 
